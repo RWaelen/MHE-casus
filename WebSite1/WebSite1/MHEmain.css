@@ -1,0 +1,143 @@
+body
+	{
+	padding:0;
+	margin:0;
+	}
+
+button
+	{
+	background-color:#ffc447;
+	border: none;
+	color:black;
+	margin-right:1px;
+	align-self:center;
+	font-size:24px;
+	padding:.5em 1em;
+	}
+
+buttonNav
+	{
+	background-color:#444c59;
+	border: none;
+	color:white;
+	margin-right:1px;
+	align-self:center;
+	padding:.5em 1em;
+	}
+
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	vertical-align: center;
+	font-family:Arial;
+	color:white;
+	}
+
+.topNav{
+	display: grid;
+	grid-template-columns:repeat(4, 1fr);
+	grid-auto-rows:4em;
+	background-color:#444c59;
+	padding-top:1em;
+	}
+	.logo 
+		{
+		font-size:36px;
+		text-align: end;
+		}
+	.dropdown{
+		padding:1em;
+		text-align: start;
+		}
+
+	.search{
+		padding:1em;
+		justify-self:end;
+		}
+	.searchbar{
+		width:20em;
+		height:2em;
+		border: none;
+		background-color:white;
+		}
+	.btnNav{
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		}
+
+.MustHaves{
+	font-size:30px;
+	text-align:top;
+	background-color:#5d6675;
+	text-align:center;
+	padding-top:1em;
+	}
+	
+.middle{
+	display: grid;
+	grid-template-columns: 1fr .75fr 1fr;
+	grid-auto-rows:minmax(375px,auto);
+	background-color:#5d6675;
+	}
+	.middle-left{
+		justify-self:right;
+		align-self:center;
+		}
+	.middle-mid{
+		justify-self:center;
+		align-self:center;
+		}
+	.middle-right{
+		justify-self:left;
+		align-self:center;
+		}
+
+.bottom{
+	background-color:white;
+	display:grid;
+	justify-items:center;
+	grid-template-columns:repeat(7, 1fr);
+	color:grey;
+	margin: 0em 10em 0em 10em;
+	}
+	.img{
+		padding:1em 1em 0em 1em;
+		}
+	
+	icontext{
+		display:grid;
+		justify-items:center;
+		margin-bottom:1em;
+		}
+	NavIconText{
+		display:grid;
+		justify-items:center;
+		margin-bottom:1em;
+		font-size:20px;
+		}
+	
+	hr {
+		display: block;
+		height: 2px;
+		border: 0;
+		border-top: 1px solid #ccc;
+		margin: 0em 5em 0em 5em;
+		padding: 0;
+		}
+	
+	.fillertext{
+		display:grid;
+		grid-template-columns: 2fr 1fr;
+		grid-gap:5em;
+		margin: 0% 10% 0% 10%;
+		color:grey;
+		}
+	.Track-Trace{
+		display:grid;
+		justify-items:center;
+		margin-top:2em;
+		padding-left:1em;
+		background-color:LightGrey;
+		}
