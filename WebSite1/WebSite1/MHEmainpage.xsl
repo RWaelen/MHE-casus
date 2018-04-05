@@ -7,7 +7,8 @@
 <html>
 <head>
   <style>
-    <link rel="stylesheet" href="areagridCSS.css"/>
+    <link rel="stylesheet" href="MHEmainpage/MHEmainpage.css"/>
+    
   </style>
 </head>
 

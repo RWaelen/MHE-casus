@@ -83,7 +83,7 @@ icontext{color:grey;}
 #top {
     grid-area: top;
     background-color: #5d6675;
-    background-image:url('../icons MHE/BG.jpg');
+    /*background-image:url('../icons MHE/BG.jpg');*/
     color:white;
     grid-template-areas: 
         ". . . head . . ." 
