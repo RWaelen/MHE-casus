@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 
@@ -18,24 +18,25 @@
     <div id="navbar">
       <!--logo-->
       <div class="logoDropdowns">
-        <b><a href="areagridXML.xml">MHE</a></b> <!--Link staat hierrrr-->
+        <b><a class="logo" href="areagridXML.xml">MHE</a></b> <!--Link staat hierrrr-->
         <!--dropdown categorieën-->
-        <Select class="Dropdowns">
-          <Option>meubels</Option>
-          <Option>meubels</Option>
-          <Option>meubels</Option>
-          <Option>meubels</Option>
-          <Option>categorieën</Option>
-        </Select>
+		<div class="dropdown">
+			<button class="dropbtn">Categoriën</button>
+			<div class="dropdown-content">
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+			</div>
+		</div>
         <!--dropdown winkels-->
-        <Select class="Dropdowns">
-          <option>Ali Express</option>
-          <option>MHE</option>
-          <option>MHE</option>
-          <option>MHE</option>
-          <option>MHE</option>
-          <option>MHE</option>
-        </Select>
+		<div class="dropdown">
+			<button class="dropbtn">Categoriën</button>
+			<div class="dropdown-content">
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+			</div>
+		</div>
       </div>
       <!--searchbar-->
       <input class="search" type="text" name="search" placeholder="Search.."/>
