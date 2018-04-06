@@ -7,7 +7,7 @@
 <html>
 <head>
   <style>
-    <link rel="stylesheet" href="TemplateCSS.css"/>
+    <link rel="stylesheet" href="Winkelwagen.css"/>
   </style>
 </head>
 
@@ -67,14 +67,90 @@
     <!--top deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
     <!--Must have content-->
     <div id="top">
-
+      <div class="Head">
+        <div class="wwimg">
+          <img  src="icons MHE/winkelwagenGroot.png"/>
+        </div>
+        <div class="wwtext">
+          <xsl:text>Jouw</xsl:text>
+          <br/>
+          <xsl:text>Winkelwagen</xsl:text>
+        </div>
+      </div>
+      <div class="TenT">
+        <div>
+          <xsl:text>Al iets besteld? Volg je</xsl:text>
+          <br/>
+          <xsl:text>product met Track&#38;Trace</xsl:text>
+        </div>
+        <button class="btnVolg">Volg nu!</button>
+      </div>
     </div>
 
     <!--mid deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
     <!--categorie iconen-->
     <div id="mid">
-      
-     
+      <!--foreach item in winkelwagen-->
+      <br/>
+      <hr/>
+      <div class="product">
+        <div class="productimg">
+          <img src="icons MHE/icon-ww.png"/>
+        </div>
+        <div class="productnaam">
+          <b><xsl:text>Productnaam</xsl:text></b>
+          <br/>
+          <xsl:text>Samsung Galaxy S9</xsl:text>
+        </div>
+        <div class="winkelnaam">
+          <b><xsl:text>Winkelnaam</xsl:text></b>
+          <br/>
+          <xsl:text>MHE</xsl:text>
+        </div>
+        <div class="aantal">
+          <b><xsl:text>Aantal</xsl:text></b>
+          <br/>
+          <xsl:text>2</xsl:text>
+        </div>
+        <div class="verwijder">
+          <button>Verwijder
+            <img/>
+          </button>
+        </div>
+        <div class="prijs">
+            <b><xsl:text>Prijs</xsl:text></b>
+            <br/>
+            <xsl:text>&#8364;21,99</xsl:text>
+        </div>
+      </div>
+      <hr/>
+      <br/>
+      <div class="optelsom">
+        <div class="hebjealles">
+          Heb je alles wat je nodig hebt?
+        </div>
+        <div class="kosten">
+          <div>
+            <span>
+              Productkosten <span class="prijskosten">&#8364;21,99</span>
+            </span>
+          </div>
+          <br/>
+          <div>
+            <span>
+              Bezorgkosten <span class="prijskosten">&#8364;0,00</span>
+            </span>
+          </div>
+          <hr2/>
+          <div>
+            <span>
+              Totaal <span class="prijskosten">&#8364;21,99</span>
+            </span>
+          </div>
+          <button class="btnVolg">Bestellen</button>
+          
+        </div>
+      </div>
     </div>
 
     <!--footer deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->

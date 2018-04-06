@@ -15,11 +15,22 @@ body {margin:0px;
 
 hr {
     display: block;
-    height: 2px;
-    width:80em;
+    height:1px;
+    width:70%;
     border: 0;
     border-top: 1px solid #ccc;
     padding:1px;
+}
+
+hr2 {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid grey;
+    padding: 1px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 a { color:white;
@@ -66,9 +77,11 @@ icontext{color:grey;}
 		.dropbtn {
 			background-color: #4CAF50;
 			color: white;
-			padding: 12px;
+			padding: 8px;
+            margin-bottom:5px;
 			font-size: 16px;
 			border: none;
+            border-radius:4px;
 			width: 120px;
 		}
 
@@ -103,6 +116,8 @@ icontext{color:grey;}
 	.search {
         grid-area: search;
         height:35px;
+        border:none;
+        border-radius:14px;
     }
 
     .buttons {
@@ -118,109 +133,130 @@ icontext{color:grey;}
         .navImgText{
             font-size:12px;
         }
+
 /*top||||||||||||||||||||||||||||||||||||||||||*/
 #top {
+    display:grid;
     grid-area: top;
     background-color: #5d6675;
-    /*background-image:url('../icons MHE/BG.jpg');*/
     color:white;
     grid-template-areas: 
-        ". . . head . . ." 
-        ". content content content content content ."
+        ". Head . . TenT . ." 
 }
-    .Head {
-        grid-area: head;
-        text-align: center;
-        margin: 1em;
-        margin-top:2em;
-        font-size: 30px;
-        color:white;
+    
+.Head {
+    display: grid;
+    grid-area: Head;
+    grid-template-areas: "left right";
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-left:4em;
+    color: white;
+}
+
+    .wwimg{grid-area:left;
     }
-    .top {
-        display:grid;
-        grid-area: content;
-        grid-template-columns:1fr .75fr 1fr;
-        margin-bottom:2em;
+    .wwimg>*{
+        width:150px;
+        height:150px;
+        margin-left:3em;
     }
-        .left {
-            justify-self: right;
-            align-self: center;
-        }
-        .mid {
-            justify-self: center;
-            align-self: center;
-        }
-        .right {
-            justify-self: left;
-            align-self: center;
-        }
+.wwtext {
+    grid-area: right;
+    margin-top: 2.1em;
+    font-size: 30px;
+}
+.TenT {
+    text-align: end;
+    grid-area: TenT;
+    margin-top: 5.1em;
+    margin-bottom: 1em;
+    margin-left:10em;
+    color: white;
+}
+.btnVolg {
+    padding: .3em 2.6em .3em 2.6em;
+    font-size: 20px;
+    background-color: darkgrey;
+    border: 0;
+    margin-top:.5em;
+    border-radius:4px;
+}
+
+    .btnVolg:hover {
+        background-color:grey;
+        transition: 0.5s;
+    }
+
+
 
 /*mid||||||||||||||||||||||||||||||||||||||||||*/
 #mid {
     grid-area: mid;
     background-color: whitesmoke;
-    display: grid;
-    justify-items: center;
     color: grey;
-    margin: 0em 10em 0em 10em;
-    grid-template-areas:
-        "iconCat"
-        "line"
-        "additional"
-}
-.iconCat{
-    display:grid;
-    grid-area:iconCat;
-    grid-column-gap:2em;
-    grid-template-columns:repeat(7,1fr);
-}
-    .img {
-        padding: 1em 1em 0em 1em;
-    }
-        .img:hover {
-            transition: .5s ease;
-            opacity: 0.5;
-        }
-    icontext {
-        display: grid;
-        justify-items: center;
-        margin-bottom: 1em;
-    }
-
  
-
-.additional {
-    display: grid;
-    grid-area: additional;
-    grid-template-columns: 2fr 1fr;
 }
 
-    .fillertext {
-        display: grid;
-        grid-gap: 5em;
-        margin: 0% 10% 0% 4%;
-        color: grey;
-    }
+.product {
+    display: grid;
+    grid-template-columns:15em .75fr 1fr 1fr .5fr 1fr 1.1fr 1fr 15em;
+    grid-template-areas:
+        ". productimg productnaam winkelnaam aantal verwijder . prijs ."
 
-    .Track-Trace {
-        display: grid;
-        align-items:center;
-        justify-items: center;
-        margin-top: 2em;
-        padding-left: 1em;
-        background-color: LightGrey;
-        margin-bottom:2em;
+}
+.productimg {
+    grid-area: productimg;
+}
+    .productimg>*{
+        height:100px;
+        width:100px;
     }
-    .btnVolg{
-        padding:1em;
-        background-color:goldenrod;
-        border:0;
-        margin-left:2.5em;
-    }
-        .btnVolg:hover {
-            background-color: darkgoldenrod;
-            transition:0.5s;
-        }
+.productnaam {
+    grid-area: productnaam;
+    margin-top:1em;
+}
+.winkelnaam {
+    grid-area: winkelnaam;
+    margin-top: 1em;
+}
+.aantal {
+    grid-area: aantal;
+    margin-top: 1em;
+}
+.verwijder {
+    grid-area: verwijder;
+    padding: 5px;
+    margin-top: 1em;
+}
+.prijs {
+    grid-area: prijs;
+    margin-top: 1em;
+    text-align:right;
+    margin-right:1em;
+}
+
+.optelsom {
+    background-color: lightgrey;
+    margin:0em 15em 2em 15em;
+    margin-bottom: 2em;
+    padding:1em;
+    color:grey;
+    display:grid;
+    grid-template-areas:"text . kosten"
+}
+.hebjealles{
+    grid-area:text;
+}
+
+.kosten{
+    grid-area:kosten;
+    justify-self:end;
+}
+
+.prijskosten{
+    float:right;
+}
 
 /*footer||||||||||||||||||||||||||||||||||||||||||*/
 #footer {
