@@ -5,6 +5,7 @@ body {margin:0px;
 .grid-container {
     display:grid;
     grid-auto-rows:minmax(60px,auto);
+    background-image: url("icons MHE/bg3.jpg");
     font-family:Arial;
     grid-template-areas: 
         "navbar" 
@@ -44,9 +45,9 @@ icontext{color:grey;}
 #navbar {
     position: fixed;
     top: 0;
-    width:100%;
+    width: 100%;
     grid-area: navbar;
-    background-color: #444c59;
+    background-color: #081D20;
     color: white;
     grid-auto-rows: minmax(60px,80px);
     align-items: center;
@@ -68,14 +69,13 @@ icontext{color:grey;}
 			position: center;
 		}
 
-
 	.dropdown {
 		position: relative;
 		display: inline-block;
 	}
 
 		.dropbtn {
-			background-color: #4CAF50;
+			background-color: #081D20;
 			color: white;
 			padding: 8px;
             margin-bottom:5px;
@@ -85,9 +85,9 @@ icontext{color:grey;}
 			width: 120px;
 		}
 
-		.dropdown:hover .dropbtn {
-			background-color: #3e8e41;
-		}
+        .dropdown:hover .dropbtn {
+            background-color: #0c3135;
+}
 
 			.dropdown-content {
 				display: none;
@@ -136,12 +136,12 @@ icontext{color:grey;}
 
 /*top||||||||||||||||||||||||||||||||||||||||||*/
 #top {
-    display:grid;
+    display: grid;
     grid-area: top;
     background-color: #5d6675;
-    color:white;
-    grid-template-areas: 
-        ". Head . . TenT . ." 
+    background: linear-gradient(to left, #0c3135, transparent), url("icons MHE/bg3.jpg");
+    color: white;
+    grid-template-areas: ". Head . . TenT . ."
 }
     
 .Head {
@@ -195,7 +195,6 @@ icontext{color:grey;}
     grid-area: mid;
     background-color: whitesmoke;
     color: grey;
- 
 }
 
 .product {
@@ -203,69 +202,79 @@ icontext{color:grey;}
     grid-template-columns:15em .75fr 1fr 1fr .5fr 1fr 1.1fr 1fr 15em;
     grid-template-areas:
         ". productimg productnaam winkelnaam aantal verwijder . prijs ."
-
 }
-.productimg {
-    grid-area: productimg;
-}
-    .productimg>*{
-        height:100px;
-        width:100px;
+    .productimg {
+        grid-area: productimg;
+        margin-right:2px;
     }
-.productnaam {
-    grid-area: productnaam;
-    margin-top:1em;
-}
-.winkelnaam {
-    grid-area: winkelnaam;
-    margin-top: 1em;
-}
-.aantal {
-    grid-area: aantal;
-    margin-top: 1em;
-}
-.verwijder {
-    grid-area: verwijder;
-    padding: 5px;
-    margin-top: 1em;
-}
-.prijs {
-    grid-area: prijs;
-    margin-top: 1em;
-    text-align:right;
-    margin-right:1em;
-}
+        .productimg>*{
+            height:100px;
+            width:auto;
+        }
+    .productnaam {
+        grid-area: productnaam;
+        margin-top:1em;
+    }
+    .winkelnaam {
+        grid-area: winkelnaam;
+        margin-top: 1em;
+    }
+    .aantal {
+        grid-area: aantal;
+        margin-top: 1em;
+    }
+    .aantalSelect{
+        width:3.1em;
+        border:none;
+        background-color:whitesmoke;
+    }
+    .verwijder {
+        grid-area: verwijder;
+        padding: 5px;
+        margin-top: 1em;
+    }
+    .trashcan{
+        height:30px;
+        width:30px;
+    }
+    .prijs {
+        grid-area: prijs;
+        margin-top: 1em;
+        text-align:right;
+        margin-right:1em;
+    }
 
 .optelsom {
     background-color: lightgrey;
-    margin:0em 15em 2em 15em;
+    margin: 0em 15em 2em 15em;
     margin-bottom: 2em;
-    padding:1em;
-    color:grey;
-    display:grid;
-    grid-template-areas:"text . kosten"
+    padding: 1em;
+    color: grey;
+    display: grid;
+    grid-template-areas: "text . kosten";
 }
-.hebjealles{
-    grid-area:text;
-}
+    .hebjealles{
+        grid-area:text;
+    }
 
-.kosten{
-    grid-area:kosten;
-    justify-self:end;
-}
+    .kosten{
+        grid-area:kosten;
+        justify-self:end;
+    }
 
-.prijskosten{
-    float:right;
-}
+        .prijskosten{
+            float:right;
+        }
 
 /*footer||||||||||||||||||||||||||||||||||||||||||*/
 #footer {
     grid-area: footer;
-    background-color: #5d6675;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+    background: linear-gradient(to left, #0c3135, transparent), url("icons MHE/bg2.jpg");
+    background-color: #081D20;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     padding: 3em 11em 3em 11em;
-    color:ghostwhite;
+    color: ghostwhite;
 }
 
 

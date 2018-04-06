@@ -21,7 +21,7 @@
         <b><a class="logo" href="areagridXML.xml">MHE</a></b> <!--Link staat hierrrr-->
         <!--dropdown categorieën-->
 		<div class="dropdown">
-			<button class="dropbtn">Categoriën</button>
+			<button class="dropbtn">Categorieën</button>
 			<div class="dropdown-content">
 				<a href="#">Link 1</a>
 				<a href="#">Link 2</a>
@@ -30,7 +30,7 @@
 		</div>
         <!--dropdown winkels-->
 		<div class="dropdown">
-			<button class="dropbtn">Categoriën</button>
+			<button class="dropbtn">Winkels</button>
 			<div class="dropdown-content">
 				<a href="#">Link 1</a>
 				<a href="#">Link 2</a>
@@ -95,7 +95,7 @@
       <hr/>
       <div class="product">
         <div class="productimg">
-          <img src="icons MHE/icon-ww.png"/>
+          <img src="icons MHE/musthave-s9BlauwHC.png"/>
         </div>
         <div class="productnaam">
           <b><xsl:text>Productnaam</xsl:text></b>
@@ -110,12 +110,10 @@
         <div class="aantal">
           <b><xsl:text>Aantal</xsl:text></b>
           <br/>
-          <xsl:text>2</xsl:text>
+          <input class="aantalSelect" type="number" value="2" min="0"/>
         </div>
         <div class="verwijder">
-          <button>Verwijder
-            <img/>
-          </button>
+          <img class="trashcan" src="icons MHE/Trashcan.png"/>
         </div>
         <div class="prijs">
             <b><xsl:text>Prijs</xsl:text></b>
@@ -127,7 +125,7 @@
       <br/>
       <div class="optelsom">
         <div class="hebjealles">
-          Heb je alles wat je nodig hebt?
+          Heb je alles wat je nodig hebt? <br/> Bestel dan nu!
         </div>
         <div class="kosten">
           <div>
