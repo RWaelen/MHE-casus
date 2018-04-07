@@ -125,7 +125,8 @@
       <br/>
       <div class="optelsom">
         <div class="hebjealles">
-          Heb je alles wat je nodig hebt? <br/> Bestel dan nu!
+          Heb je alles wat je nodig hebt? <br/> Bestel dan nu!<br/><br/><br/><br/><br/>
+          <button class="btnVolg">Verder winkelen</button>
         </div>
         <div class="kosten">
           <div>

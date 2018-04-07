@@ -194,6 +194,7 @@ icontext{color:grey;}
 #mid {
     grid-area: mid;
     background-color: whitesmoke;
+    background: linear-gradient(to left, transparent, whitesmoke,whitesmoke,whitesmoke,whitesmoke,whitesmoke,whitesmoke,whitesmoke,whitesmoke,whitesmoke, transparent), url("icons MHE/bgRaster.png");
     color: grey;
 }
 
