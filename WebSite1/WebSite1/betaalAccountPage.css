@@ -20,6 +20,18 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
     padding:1px;
+    grid-area:hline;
+}
+vr {
+    display: block;
+    height: auto;
+    width: 2px;
+    border: 0;
+    border-left: 1px solid #ccc;
+    padding: 1px;
+    grid-area:vline;
+    justify-self:center;
+    margin-top:1em;
 }
 
 a { color:white;
@@ -122,11 +134,9 @@ icontext{color:grey;}
 #top {
     grid-area: top;
     background-color: #5d6675;
-    /*background-image:url('../icons MHE/BG.jpg');*/
     color:white;
     grid-template-areas: 
         ". . . head . . ." 
-        ". content content content content content ."
 }
     .Head {
         grid-area: head;
@@ -136,92 +146,104 @@ icontext{color:grey;}
         font-size: 30px;
         color:white;
     }
-    .top {
-        display:grid;
-        grid-area: content;
-        grid-template-columns:1fr .75fr 1fr;
-        margin-bottom:2em;
-    }
-        .left {
-            justify-self: right;
-            align-self: center;
-        }
-        .mid {
-            justify-self: center;
-            align-self: center;
-        }
-        .right {
-            justify-self: left;
-            align-self: center;
-        }
 
 /*mid||||||||||||||||||||||||||||||||||||||||||*/
 #mid {
     grid-area: mid;
     background-color: whitesmoke;
     display: grid;
-    justify-items: center;
     color: grey;
-    margin: 0em 10em 0em 10em;
+    margin:2em 0em 2em 0em;
+    grid-template-columns:1fr;
     grid-template-areas:
-        "iconCat"
-        "line"
-        "additional"
+        "Statement"
+        "hline"
+        "content"
+        "account";
 }
-.iconCat{
-    display:grid;
-    grid-area:iconCat;
-    grid-column-gap:2em;
-    grid-template-columns:repeat(7,1fr);
+
+.inputStyle {
+    width: 250px;
+    height: 2em;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
 }
-    .img {
-        padding: 1em 1em 0em 1em;
-    }
-        .img:hover {
-            transition: .5s ease;
-            opacity: 0.5;
-        }
-    icontext {
-        display: grid;
-        justify-items: center;
-        margin-bottom: 1em;
-    }
-
- 
-
-.additional {
+.Statement {
     display: grid;
-    grid-area: additional;
-    grid-template-columns: 2fr 1fr;
+    grid-area: Statement;
+    grid-template-areas:"S1 S2";
+    margin-bottom:1em;
 }
 
-    .fillertext {
-        display: grid;
-        grid-gap: 5em;
-        margin: 0% 10% 0% 4%;
-        color: grey;
+    .S1{
+        grid-area:S1;
+        margin-left:23.5em;
     }
 
-    .Track-Trace {
-        display: grid;
-        align-items:center;
-        justify-items: center;
-        margin-top: 2em;
-        padding-left: 1em;
-        background-color: LightGrey;
-        margin-bottom:2em;
+    .S2 {
+        grid-area:S2;
     }
+.content{
+    display:grid;
+    margin-top:1em;
+    grid-area:content;
+    grid-template-areas:"log vline nolog"
+}
+.log {
+    grid-area: log;
+    justify-self: right;
+}
+
+.nolog {
+    grid-area: nolog;
+    justify-self: left;
+    
+}
+.log>*{
+    margin-top: 1em;
+}
+.nolog > * {
+    margin-top: 1em;
+}
+
     .btnVolg{
         padding:1em;
-        background-color:goldenrod;
+        background-color:#5d6675;
         border:0;
-        margin-left:2.5em;
+        color:whitesmoke;
+        width:250px;
     }
         .btnVolg:hover {
-            background-color: darkgoldenrod;
+            background-color: grey;
             transition:0.5s;
         }
 
+.divStyle {
+    padding: 0em 1em 1em 1em;
+}
+.divStyle>*{
+    margin-top:1em;
+}
+
+.account{
+    grid-area:account;
+    margin-top:1em;
+    text-align:center;
+    margin-bottom:1.5em;
+}
+.account>*{
+    margin-top:1em;
+}
+
+.BiggerText{
+    font-size:26px;
+}
+
+.BigText {
+    font-size: 22px;
+}
+    
 /*footer||||||||||||||||||||||||||||||||||||||||||*/
 #footer {
     grid-area: footer;

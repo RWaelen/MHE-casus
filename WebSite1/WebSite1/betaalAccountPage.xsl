@@ -7,7 +7,7 @@
 <html>
 <head>
   <style>
-    <link rel="stylesheet" href="TemplateCSS.css"/>
+    <link rel="stylesheet" href="betaalAccountPage.css"/>
   </style>
 </head>
 
@@ -65,16 +65,62 @@
       </div>
     </div>
     <!--top deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-    <!--Must have content-->
-    <div id="top">
 
+    <div id="top">
+      <div  class="Head">
+        <xsl:text>Hoe wilt u uw bestelling plaatsen?</xsl:text>
+      </div>
     </div>
 
     <!--mid deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-    <!--categorie iconen-->
+
     <div id="mid">
+      <div class="Statement">
+        <div class="S1">
+          <text class="BiggerText">Ik heb al een account</text>
+        </div>
+        <div class="S2">
+          <text class="BiggerText">Ik heb geen account</text>
+        </div>
+      </div>
+      <hr/>
       
-     
+      <div class="content">
+        <!--Linker deel voor in te loggen wanneer er al een account is gemaakt-->
+        <div class="log">
+          <text class="BigText">Inloggen</text>
+          <br/>
+            <input class="inputStyle" type="email" placeholder="Emailadres"></input>
+            <br/>
+            <input class="inputStyle" placeholder="Wachtwoord"></input>
+            <br/>
+            <button class="btnVolg">Volgende</button>
+        </div>
+        <vr></vr>
+        <!--Linker deel om te bestellen wanneer er geen account is gemaakt-->
+        <div class="nolog">
+          <text class="BigText">Bestellen zonder account</text>
+          <br/>
+            <input class="inputStyle" type="email" placeholder="Emailadres"></input>
+            <br/>
+            <input class="inputStyle" placeholder="Voornaam"></input>
+            <br/>
+            <input class="inputStyle" placeholder="Achternaam"></input>
+            <br/>
+            <input class="inputStyle" placeholder="Adres"></input>
+            <br/>
+            <input class="inputStyle" placeholder="postcode"></input>
+            <br/>
+            <button class="btnVolg">Volgende</button>
+            <br/>
+        </div>
+        
+      </div>
+      <div class="account">
+        <hr/>
+        <br/>
+        <text class="BigText">Account aanmaken?<br/>Klik hier</text>
+      </div>
     </div>
 
     <!--footer deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
