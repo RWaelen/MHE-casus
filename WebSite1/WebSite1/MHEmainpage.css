@@ -1,25 +1,22 @@
-﻿body {margin:0px;
-      background-color:whitesmoke;
+﻿﻿body {
+    margin: 0px;
+    background-color: whitesmoke;
 }
 
 .grid-container {
-    display:grid;
-    grid-auto-rows:minmax(60px,auto);
-    font-family:Arial;
-    grid-template-areas: 
-        "navbar" 
-        "top" 
-        "mid" 
-        "footer";
+    display: grid;
+    grid-auto-rows: minmax(60px,auto);
+    font-family: Arial;
+    grid-template-areas: "navbar" "top" "mid" "footer";
 }
 
 hr {
     display: block;
     height: 2px;
-    width:80em;
+    width: 80em;
     border: 0;
     border-top: 1px solid #ccc;
-    padding:1px;
+    padding: 1px;
 }
 
 vr {
@@ -31,18 +28,21 @@ vr {
     padding: 1px;
 }
 
-a { color:white;
-    border:0;
-    text-decoration:none;
+a {
+    color: white;
+    border: 0;
+    text-decoration: none;
 }
 
-icontext{color:grey;}
+icontext {
+    color: grey;
+}
 
 /*navbar||||||||||||||||||||||||||||||||||||||||||*/
 #navbar {
     position: fixed;
     top: 0;
-    width:100%;
+    width: 100%;
     grid-area: navbar;
     background-color: #444c59;
     color: white;
@@ -52,69 +52,79 @@ icontext{color:grey;}
     grid-template-areas: ". . logoDropdowns . . search buttons .";
 }
 
-    .logoDropdowns {
+.logoDropdowns {
     grid-area: logoDropdowns;
-    font-size: 36px; 
-    align-items:flex-end;
+    font-size: 36px;
+    align-items: flex-end;
 }
-        .logoDropdowns > * {
-            margin-right: 1em;
-        }
-        .Dropdowns{
-            padding:.3em;
-        }
-    .search {
-        grid-area: search;
-        height:35px;
+
+    .logoDropdowns > * {
+        margin-right: 1em;
     }
-    .buttons {
-        grid-area: buttons;
-        margin-left:2em;
-        display:grid;
-        grid-template-columns:1fr 3fr;
-    }
-        .navImg { width:35px;
-                  height:35px;
-        }
-        .navImgText{
-            font-size:12px;
-        }
+
+.Dropdowns {
+    padding: .3em;
+}
+
+.search {
+    grid-area: search;
+    height: 35px;
+}
+
+.buttons {
+    grid-area: buttons;
+    margin-left: 2em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.navImg {
+    width: 35px;
+    height: 35px;
+}
+
+.navImgText {
+    font-size: 12px;
+}
 /*top||||||||||||||||||||||||||||||||||||||||||*/
 #top {
     grid-area: top;
     background-color: #5d6675;
     /*background-image:url('../icons MHE/BG.jpg');*/
-    color:white;
-    grid-template-areas: 
-        ". . . head . . ." 
-        ". content content content content content ."
+    color: white;
+    grid-template-areas: ". . . head . . ." ". content content content content content ."
 }
-    .Head {
-        grid-area: head;
-        text-align: center;
-        margin: 1em;
-        margin-top:2em;
-        font-size: 30px;
-        color:white;
-    }
-    .top {
-        display:grid;
-        grid-area: content;
-        grid-template-columns:1fr .75fr 1fr;
-        margin-bottom:2em;
-    }
-        .left {
-            justify-self: right;
-            align-self: center;
-        }
-        .mid {
-            justify-self: center;
-            align-self: center;
-        }
-        .right {
-            justify-self: left;
-            align-self: center;
-        }
+
+.Head {
+    grid-area: head;
+    text-align: center;
+    margin: 1em;
+    margin-top: 2em;
+    font-size: 30px;
+    color: white;
+}
+
+.top {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr .75fr 1fr;
+    margin-bottom: 2em;
+}
+
+.left {
+    justify-self: right;
+    align-self: center;
+}
+
+.mid {
+    justify-self: center;
+    align-self: center;
+}
+
+.right {
+    justify-self: left;
+    align-self: center;
+}
 
 /*mid||||||||||||||||||||||||||||||||||||||||||*/
 #mid {
@@ -124,31 +134,32 @@ icontext{color:grey;}
     justify-items: center;
     color: grey;
     margin: 0em 10em 0em 10em;
-    grid-template-areas:
-        "iconCat"
-        "line"
-        "additional"
+    grid-template-areas: "iconCat" "line" "additional"
 }
-.iconCat{
-    display:grid;
-    grid-area:iconCat;
-    grid-column-gap:2em;
-    grid-template-columns:repeat(7,1fr);
+
+.iconCat {
+    display: grid;
+    grid-area: iconCat;
+    grid-column-gap: 2em;
+    grid-template-columns: repeat(7,1fr);
 }
-    .img {
-        padding: 1em 1em 0em 1em;
-    }
-        .img:hover {
-            transition: .5s ease;
-            opacity: 0.5;
-        }
-    icontext {
-        display: grid;
-        justify-items: center;
-        margin-bottom: 1em;
+
+.img {
+    padding: 1em 1em 0em 1em;
+}
+
+    .img:hover {
+        transition: .5s ease;
+        opacity: 0.5;
     }
 
- 
+icontext {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 1em;
+}
+
+
 
 .additional {
     display: grid;
@@ -156,43 +167,41 @@ icontext{color:grey;}
     grid-template-columns: 2fr 1fr;
 }
 
-    .fillertext {
-        display: grid;
-        grid-gap: 5em;
-        margin: 0% 10% 0% 4%;
-        color: grey;
-    }
+.fillertext {
+    display: grid;
+    grid-gap: 5em;
+    margin: 0% 10% 0% 4%;
+    color: grey;
+}
 
-    .Track-Trace {
-        display: grid;
-        align-items:center;
-        justify-items: center;
-        margin-top: 2em;
-        padding-left: 1em;
-        background-color: LightGrey;
-        margin-bottom:2em;
+.Track-Trace {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2em;
+    padding-left: 1em;
+    background-color: LightGrey;
+    margin-bottom: 2em;
+}
+
+.btnVolg {
+    padding: 1em;
+    background-color: goldenrod;
+    border: 0;
+    margin-left: 2.5em;
+}
+
+    .btnVolg:hover {
+        background-color: darkgoldenrod;
+        transition: 0.5s;
     }
-    .btnVolg{
-        padding:1em;
-        background-color:goldenrod;
-        border:0;
-        margin-left:2.5em;
-    }
-        .btnVolg:hover {
-            background-color: darkgoldenrod;
-            transition:0.5s;
-        }
 
 /*footer||||||||||||||||||||||||||||||||||||||||||*/
 #footer {
     grid-area: footer;
     background-color: #5d6675;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     padding: 3em 11em 3em 11em;
-    color:ghostwhite;
+    color: ghostwhite;
 }
-
-
-
-

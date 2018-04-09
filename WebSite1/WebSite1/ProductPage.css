@@ -1,0 +1,253 @@
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    grid-auto-rows: minmax(60px,auto);
+    font-family: Arial;
+    grid-template-areas: "navbar" "top" "mid" "footer";
+}
+
+hr {
+    display: block;
+    height: 2px;
+    width: 80em;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding: 1px;
+}
+
+a {
+    color: white;
+    border: 0;
+    text-decoration: none;
+}
+
+icontext {
+    color: grey;
+}
+
+/*navbar||||||||||||||||||||||||||||||||||||||||||*/
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    grid-area: navbar;
+    background-color: #444c59;
+    color: white;
+    grid-auto-rows: minmax(60px,80px);
+    align-items: center;
+    display: grid;
+    grid-template-areas: ". . logoDropdowns . . search buttons .";
+}
+
+.logoDropdowns {
+    grid-area: logoDropdowns;
+    align-items: flex-end;
+}
+
+    .logoDropdowns > * {
+        margin-right: 1em;
+    }
+
+.logo {
+    font-size: 36px;
+    position: center;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    width: 120px;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: white;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.search {
+    grid-area: search;
+    height: 35px;
+}
+
+.buttons {
+    grid-area: buttons;
+    margin-left: 2em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.navImg {
+    width: 35px;
+    height: 35px;
+}
+
+.navImgText {
+    font-size: 12px;
+}
+/*top||||||||||||||||||||||||||||||||||||||||||*/
+#top {
+    margin-top: 1.25em;
+    position: static;
+    display: grid;
+    grid-area: top;
+    background-color: #5d6675;
+    /*background-image:url('../icons MHE/BG.jpg');*/
+    color: white;
+    width: 100%;
+    grid-auto-rows: minmax(150px,200px);
+    grid-template-areas: "image image productInfo productInfo customize confirm" "image image productInfo productInfo . prijs";
+}
+
+
+.foto {
+    display: block;
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+}
+
+.product {
+    border: 3px solid rgb(78, 85, 96);
+    background-color: rgb(90, 98, 112) !important;
+    box-shadow: 10px 10px 1em rgb(54, 60, 68);
+    padding: 1em;
+    display: block;
+    grid-area: productInfo;
+    text-align: left;
+    margin: 60px;
+}
+
+.productfeature {
+    border: 3px solid rgb(78, 85, 96);
+    background-color: rgb(90, 98, 112) !important;
+    box-shadow: 10px 10px 1em rgb(54, 60, 68);
+    padding: 10px;
+    margin: 15px;
+    width: 200px;
+    height: 150px;
+    grid-area: customize;
+    text-align: center;
+}
+
+.toevoegen {
+    grid-area: confirm;
+    text-align: center;
+    margin-right:1em;
+    padding-top: 1em;
+}
+
+.prijs{
+    grid-area: prijs;
+    text-align:end;
+    margin-right:1em;
+    padding-top:8em;
+}
+
+.confirmbutton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    white-space: normal;
+}
+
+    .confirmbutton:hover {
+        background-color: #3e8e41;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+/*mid||||||||||||||||||||||||||||||||||||||||||*/
+#mid {
+    display: grid;
+    grid-area: mid;
+    background-color: #5d6675;
+    position: static;
+    color: grey;
+    padding-bottom:2em;
+    grid-auto-rows: minmax(150px,300px);
+    grid-template-areas: "speci speci prices";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.productinformatie {
+    border: 3px solid rgb(78, 85, 96);
+    box-shadow: 10px 10px 1em rgb(54, 60, 68);
+    background-color: whitesmoke;
+    margin: 1em;
+    padding: 1em;
+    grid-area: speci;
+}
+
+.prijsinfo {
+    background-color: #5d6675;
+    margin-left:2em;
+    grid-area: prices;
+    align-self: center;
+    justify-self: center;
+}
+
+.infobalk {
+    border: 3px solid rgb(78, 85, 96);
+    box-shadow: 10px 10px 1em rgb(54, 60, 68);
+    border-radius: 15px;
+    background: whitesmoke;
+    padding: 20px;
+    width: 350px;
+    height: 225px;
+}
+
+
+
+/*footer||||||||||||||||||||||||||||||||||||||||||*/
+#footer {
+    grid-area: footer;
+    background-color: #5d6675;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3em 11em 3em 11em;
+    color: ghostwhite;
+}
