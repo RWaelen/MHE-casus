@@ -7,7 +7,7 @@
     <html>
       <head>
         <style>
-          <link rel="stylesheet" href="ProductPage.css"/>
+          <link rel="stylesheet" href="product.css"/>
         </style>
       </head>
 
@@ -91,7 +91,7 @@
               <form action="/action_page.php">
                 Quantity:
                 <input type="number" name="quantity"
-                 min="0" max="999" step="1" value="1" style="width:2em;margin:2em;"/>
+                 min="0" max="999" step="1" value="1" style="width:3em;margin:2em;background-color:transparent;border:none;color:white;"/>
               </form>
               <a></a>
             </div>
