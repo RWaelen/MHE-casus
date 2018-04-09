@@ -22,6 +22,15 @@ hr {
     padding:1px;
 }
 
+vr {
+    display: block;
+    height: auto;
+    width: 1px;
+    border: 0;
+    border-left: 1px solid #ccc;
+    padding: 1px;
+    grid-area:vline;}
+
 a { color:white;
     border:0;
     text-decoration:none;
@@ -122,11 +131,9 @@ icontext{color:grey;}
 #top {
     grid-area: top;
     background-color: #5d6675;
-    /*background-image:url('../icons MHE/BG.jpg');*/
     color:white;
     grid-template-areas: 
         ". . . head . . ." 
-        ". content content content content content ."
 }
     .Head {
         grid-area: head;
@@ -136,24 +143,7 @@ icontext{color:grey;}
         font-size: 30px;
         color:white;
     }
-    .top {
-        display:grid;
-        grid-area: content;
-        grid-template-columns:1fr .75fr 1fr;
-        margin-bottom:2em;
-    }
-        .left {
-            justify-self: right;
-            align-self: center;
-        }
-        .mid {
-            justify-self: center;
-            align-self: center;
-        }
-        .right {
-            justify-self: left;
-            align-self: center;
-        }
+
 
 /*mid||||||||||||||||||||||||||||||||||||||||||*/
 #mid {
@@ -162,65 +152,56 @@ icontext{color:grey;}
     display: grid;
     justify-items: center;
     color: grey;
-    margin: 0em 10em 0em 10em;
-    grid-template-areas:
-        "iconCat"
-        "line"
-        "additional"
+    margin: 2em 10em 0em 10em;
+    grid-template-areas: ". left vline right ." ;
 }
-.iconCat{
-    display:grid;
-    grid-area:iconCat;
-    grid-column-gap:2em;
-    grid-template-columns:repeat(7,1fr);
-}
-    .img {
-        padding: 1em 1em 0em 1em;
-    }
-        .img:hover {
-            transition: .5s ease;
-            opacity: 0.5;
-        }
-    icontext {
-        display: grid;
-        justify-items: center;
-        margin-bottom: 1em;
-    }
-
- 
-
-.additional {
+.left {
     display: grid;
-    grid-area: additional;
-    grid-template-columns: 2fr 1fr;
+    grid-area: left;
+    grid-template-areas:
+        "Gegevens"
+        "betaalwijze"
+}
+    .gegevens{
+        grid-area:Gegevens;
+    }
+    .betaalwijze {
+        grid-area: betaalwijze;
+    }
+        .betaalwijze > * {
+            margin: 1em 0em;
+            background-color: whitesmoke;
+            padding: 1.5em;
+            width: 20em;
+            border-color: grey;
+            border-radius: 8px;
+            border-width: thin;
+            border: solid;
+        }
+
+.right {
+    display: grid;
+    grid-area: right;
+    grid-template-areas:
+        "levering"
+        "bestelling"
+}
+    .levering {
+        grid-area: levering;
+    }
+
+    .bestelling {
+        grid-area: bestelling;
+    }
+
+.BigText{
+    font-size:22px;
+    margin: 2em 0em 2em 0em;
 }
 
-    .fillertext {
-        display: grid;
-        grid-gap: 5em;
-        margin: 0% 10% 0% 4%;
-        color: grey;
-    }
-
-    .Track-Trace {
-        display: grid;
-        align-items:center;
-        justify-items: center;
-        margin-top: 2em;
-        padding-left: 1em;
-        background-color: LightGrey;
-        margin-bottom:2em;
-    }
-    .btnVolg{
-        padding:1em;
-        background-color:goldenrod;
-        border:0;
-        margin-left:2.5em;
-    }
-        .btnVolg:hover {
-            background-color: darkgoldenrod;
-            transition:0.5s;
-        }
+.summary{
+    margin:1em 0em;
+}
 
 /*footer||||||||||||||||||||||||||||||||||||||||||*/
 #footer {

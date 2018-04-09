@@ -65,15 +65,66 @@
       </div>
     </div>
     <!--top deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-    <!--Must have content-->
     <div id="top">
-
+      <div class="Head">
+        <text >Bestelling afronden</text>
+      </div>
     </div>
 
     <!--mid deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
     <!--categorie iconen-->
     <div id="mid">
-      
+      <div class="left">
+        <div class="gegevens">
+          <text class="BigText">Controleer uw gegevens</text>
+          <div>
+            <div class="summary">
+              <text>Email</text>
+            </div>
+            <div class="summary">
+              <text>voornaam achternaam</text>
+            </div>
+            <div class="summary">
+              <text>adres</text>
+            </div>
+            <div class="summary">
+              <text>Postcode</text>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="betaalwijze">
+          <div>
+            <input type="checkbox"></input>
+            <img/>
+            creditcard/mastercard
+          </div>
+          <div>
+            <img/>
+            <input type="checkbox"></input>
+            paypal
+          </div>
+          <div>
+            <img/>
+            <input type="checkbox"></input>
+            ideal
+          </div>
+          
+        </div>
+
+        <button>Betalen</button>
+      </div>
+      <vr/>
+      <div class="right">
+        <text class="BigText">Levering</text>
+        <div class="summary">
+          <text>Postcode</text>
+        </div>
+        <div class="summary">
+          <text>Postcode</text>
+        </div>
+      </div>
      
     </div>
 
