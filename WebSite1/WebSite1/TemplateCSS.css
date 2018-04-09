@@ -1,39 +1,39 @@
-body {margin:0px;
-      background-color:whitesmoke;
+body {
+    margin: 0px;
+    background-color: whitesmoke;
 }
 
 .grid-container {
-    display:grid;
-    grid-auto-rows:minmax(60px,auto);
-    font-family:Arial;
-    grid-template-areas: 
-        "navbar" 
-        "top" 
-        "mid" 
-        "footer";
+    display: grid;
+    grid-auto-rows: minmax(60px,auto);
+    font-family: Arial;
+    grid-template-areas: "navbar" "top" "mid" "footer";
 }
 
 hr {
     display: block;
     height: 2px;
-    width:80em;
+    width: 80em;
     border: 0;
     border-top: 1px solid #ccc;
-    padding:1px;
+    padding: 1px;
 }
 
-a { color:white;
-    border:0;
-    text-decoration:none;
+a {
+    color: white;
+    border: 0;
+    text-decoration: none;
 }
 
-icontext{color:grey;}
+icontext {
+    color: grey;
+}
 
 /*navbar||||||||||||||||||||||||||||||||||||||||||*/
 #navbar {
     position: fixed;
     top: 0;
-    width:100%;
+    width: 100%;
     grid-area: navbar;
     background-color: #444c59;
     color: white;
@@ -43,195 +43,194 @@ icontext{color:grey;}
     grid-template-areas: ". . logoDropdowns . . search buttons .";
 }
 
-    .logoDropdowns {
-		grid-area: logoDropdowns;
-		align-items:flex-end;
-	}
-	
-	.logoDropdowns > * {
-		margin-right: 1em;
-	}
-	
-		.logo {
-			font-size: 36px;
-			position: center;
-		}
+.logoDropdowns {
+    grid-area: logoDropdowns;
+    align-items: flex-end;
+}
 
-
-	.dropdown {
-		position: relative;
-		display: inline-block;
-	}
-
-		.dropbtn {
-			background-color: #4CAF50;
-			color: white;
-			padding: 12px;
-			font-size: 16px;
-			border: none;
-			width: 120px;
-		}
-
-		.dropdown:hover .dropbtn {
-			background-color: #3e8e41;
-		}
-
-			.dropdown-content {
-				display: none;
-				position: absolute;
-				background-color: #f1f1f1;
-				min-width: 160px;
-				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-				z-index: 1;
-			}
-
-				.dropdown-content a {
-					color: black;
-					padding: 12px 16px;
-					text-decoration: none;
-					display: block;
-					background-color: white;
-				}
-
-				.dropdown-content a:hover {background-color: #ddd}
-
-				.dropdown:hover .dropdown-content {
-					display: block;
-				}
-
-	
-	.search {
-        grid-area: search;
-        height:35px;
+    .logoDropdowns > * {
+        margin-right: 1em;
     }
 
-    .buttons {
-        grid-area: buttons;
-        margin-left:2em;
-        display:grid;
-        grid-template-columns:1fr 3fr;
+.logo {
+    font-size: 36px;
+    position: center;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    width: 120px;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: white;
     }
-	
-        .navImg { width:35px;
-                  height:35px;
+
+        .dropdown-content a:hover {
+            background-color: #ddd
         }
-        .navImgText{
-            font-size:12px;
-        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.search {
+    grid-area: search;
+    height: 35px;
+}
+
+.buttons {
+    grid-area: buttons;
+    margin-left: 2em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.navImg {
+    width: 35px;
+    height: 35px;
+}
+
+.navImgText {
+    font-size: 12px;
+}
 /*top||||||||||||||||||||||||||||||||||||||||||*/
 #top {
+    /*background-image:url('../icons MHE/BG.jpg');*/
+    display: grid;
     grid-area: top;
     background-color: #5d6675;
-    /*background-image:url('../icons MHE/BG.jpg');*/
-    color:white;
-    grid-template-areas: 
-        ". . . head . . ." 
-        ". content content content content content ."
+    position: static;
+    color: grey;
+    padding-bottom: 2em;
+    grid-auto-rows: minmax(300px,auto);
+    grid-template-areas: ". . inlog . .";
+    grid-template-columns: 1fr 1fr 30em 1fr 1fr;
 }
-    .Head {
-        grid-area: head;
-        text-align: center;
-        margin: 1em;
-        margin-top:2em;
-        font-size: 30px;
-        color:white;
+
+.inlog {
+    margin-top: 4em;
+    grid-area: inlog;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+    .inlog input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
     }
-    .top {
-        display:grid;
-        grid-area: content;
-        grid-template-columns:1fr .75fr 1fr;
-        margin-bottom:2em;
+
+    .inlog input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
     }
-        .left {
-            justify-self: right;
-            align-self: center;
-        }
-        .mid {
-            justify-self: center;
-            align-self: center;
-        }
-        .right {
-            justify-self: left;
-            align-self: center;
+
+        .inlog input[type=submit]:hover {
+            background-color: #45a049;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         }
 
 /*mid||||||||||||||||||||||||||||||||||||||||||*/
 #mid {
+    display: grid;
     grid-area: mid;
+    background: linear-gradient(to left, transparent, whitesmoke,whitesmoke, transparent), url("icons MHE/bgRaster.png");
     background-color: whitesmoke;
-    display: grid;
-    justify-items: center;
+    position: static;
     color: grey;
-    margin: 0em 10em 0em 10em;
-    grid-template-areas:
-        "iconCat"
-        "line"
-        "additional"
-}
-.iconCat{
-    display:grid;
-    grid-area:iconCat;
-    grid-column-gap:2em;
-    grid-template-columns:repeat(7,1fr);
-}
-    .img {
-        padding: 1em 1em 0em 1em;
-    }
-        .img:hover {
-            transition: .5s ease;
-            opacity: 0.5;
-        }
-    icontext {
-        display: grid;
-        justify-items: center;
-        margin-bottom: 1em;
-    }
-
- 
-
-.additional {
-    display: grid;
-    grid-area: additional;
-    grid-template-columns: 2fr 1fr;
+    padding-bottom: 2em;
+    grid-auto-rows: minmax(300px,auto);
+    grid-template-areas: ". info info .";
+    grid-template-columns: 1fr 20em 20em 1fr;
 }
 
-    .fillertext {
-        display: grid;
-        grid-gap: 5em;
-        margin: 0% 10% 0% 4%;
-        color: grey;
+    #mid h1 {
+        text-align: center;
+        color: black;
+        grid-area: info;
+        font-size: 25px;
     }
 
-    .Track-Trace {
-        display: grid;
-        align-items:center;
-        justify-items: center;
-        margin-top: 2em;
-        padding-left: 1em;
-        background-color: LightGrey;
-        margin-bottom:2em;
+.register {
+    grid-area: info;
+    margin-top: 5em;
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+
+    .register > input {
+        text-align: start;
+        width: 20em;
+        height: 3em;
+        margin-left: 2em;
     }
-    .btnVolg{
-        padding:1em;
-        background-color:goldenrod;
-        border:0;
-        margin-left:2.5em;
-    }
-        .btnVolg:hover {
-            background-color: darkgoldenrod;
-            transition:0.5s;
-        }
+
+.register input[type=submit] {
+    text-align:center;
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 25px 55px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.register input[type=submit]:hover {
+    background-color: #45a049;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 /*footer||||||||||||||||||||||||||||||||||||||||||*/
 #footer {
     grid-area: footer;
     background-color: #5d6675;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     padding: 3em 11em 3em 11em;
-    color:ghostwhite;
+    color: ghostwhite;
 }
-
-
-
-
