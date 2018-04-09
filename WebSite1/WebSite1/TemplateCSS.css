@@ -171,12 +171,11 @@ icontext{color:grey;}
         .betaalwijze > * {
             margin: 1em 0em;
             background-color: whitesmoke;
+            align-self:center; 
             padding: 1.5em;
             width: 20em;
-            border-color: grey;
             border-radius: 8px;
-            border-width: thin;
-            border: solid;
+            border: solid 1px grey;
         }
 
 .right {
@@ -188,6 +187,7 @@ icontext{color:grey;}
 }
     .levering {
         grid-area: levering;
+
     }
 
     .bestelling {
@@ -201,6 +201,34 @@ icontext{color:grey;}
 
 .summary{
     margin:1em 0em;
+}
+
+.betaalimg{
+    height:35px;
+    width:35px;
+
+}
+
+.betaalcblbl{
+    margin: 0em 1em;
+    background-color:transparent;
+}
+
+.btnBetalen {
+    margin: 1em 0em;
+    padding: 1em 0em;
+    border-radius: 4px ;
+    border-width: thin;
+    border:solid 1px grey;
+}
+
+.besteldeProducten{
+    background-color:lightgrey;
+    width:20em;
+    height:auto;
+    border-radius:8px;
+    margin-bottom:1em;
+    padding:1em;
 }
 
 /*footer||||||||||||||||||||||||||||||||||||||||||*/

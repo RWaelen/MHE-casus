@@ -96,33 +96,43 @@
 
         <div class="betaalwijze">
           <div>
-            <input type="checkbox"></input>
-            <img/>
-            creditcard/mastercard
+            <input class="betaalcblbl" type="checkbox"></input>
+            <img class="betaalimg" src="icons MHE/Creditcard.png"/>
+            <text class="betaalcblbl">Creditcard/Mastercard</text>
           </div>
           <div>
-            <img/>
-            <input type="checkbox"></input>
-            paypal
+            <input class="betaalcblbl" type="checkbox"></input>
+            <img class="betaalimg" src="icons MHE/paypal.png"/>
+            <text class="betaalcblbl">paypal</text>
           </div>
           <div>
-            <img/>
-            <input type="checkbox"></input>
-            ideal
+            <input class="betaalcblbl" type="checkbox"></input>
+            <img class="betaalimg" src="icons MHE/ideal.png"/>
+            <text class="betaalcblbl">ideal</text>
+            <select class="betaalcblbl">
+              <option>Rabobank</option>
+              <option>ING</option>
+              <option>ABN Amro</option>
+              <option>SNS</option>
+            </select>
           </div>
           
         </div>
 
-        <button>Betalen</button>
+        <button class="btnBetalen">Betalen</button>
       </div>
+      
       <vr/>
+      
       <div class="right">
-        <text class="BigText">Levering</text>
-        <div class="summary">
-          <text>Postcode</text>
+        <div class="levering">
+          <text class="BigText">Levering</text>
+          <br/>
+          <text> vandaag voor 18:00 besteld, morgen in huis.</text>
         </div>
-        <div class="summary">
-          <text>Postcode</text>
+        
+        <div class="besteldeProducten">
+          <text class="BigText">Uw Bestelling</text>  
         </div>
       </div>
      
