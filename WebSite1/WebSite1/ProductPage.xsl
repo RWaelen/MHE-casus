@@ -7,7 +7,7 @@
     <html>
       <head>
         <style>
-          <link rel="stylesheet" href="TemplateCSS.css"/>
+          <link rel="stylesheet" href="ProductPage.css"/>
         </style>
       </head>
 
@@ -73,10 +73,12 @@
           <!--Must have content-->
           <div id="top">
             <div class="foto">
-              <img class="navImg" src="icons MHE/musthave-s9BlauwHC.png" style="width:25em;height:20em;padding-left:1em;"/> 
+              <img class="navImg" src="icons MHE/musthave-s9BlauwHC.png" style="width:25em;height:20em;padding-left:1em;"/>
             </div>
             <div class="product">
-              <b><h1>Samusung</h1></b>
+              <b>
+                <h1>Samusung</h1>
+              </b>
               <p>Lorem ipsum dolor sidddddddddssssssssssssssssssssssssssssssss</p>
             </div>
             <div class="productfeature">

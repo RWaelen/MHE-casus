@@ -170,15 +170,15 @@ icontext {
 .toevoegen {
     grid-area: confirm;
     text-align: center;
-    margin-right:1em;
+    margin-right: 1em;
     padding-top: 1em;
 }
 
-.prijs{
+.prijs {
     grid-area: prijs;
-    text-align:end;
-    margin-right:1em;
-    padding-top:8em;
+    text-align: end;
+    margin-right: 1em;
+    padding-top: 8em;
 }
 
 .confirmbutton {
@@ -207,7 +207,7 @@ icontext {
     background-color: #5d6675;
     position: static;
     color: grey;
-    padding-bottom:2em;
+    padding-bottom: 2em;
     grid-auto-rows: minmax(150px,300px);
     grid-template-areas: "speci speci prices";
     grid-template-columns: 1fr 1fr 1fr;
@@ -224,7 +224,7 @@ icontext {
 
 .prijsinfo {
     background-color: #5d6675;
-    margin-left:2em;
+    margin-left: 2em;
     grid-area: prices;
     align-self: center;
     justify-self: center;
