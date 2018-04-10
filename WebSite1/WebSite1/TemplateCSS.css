@@ -158,15 +158,11 @@ icontext{color:grey;}
 /*mid||||||||||||||||||||||||||||||||||||||||||*/
 #mid {
     grid-area: mid;
-    background-color: whitesmoke;
+    background: linear-gradient(to left, transparent, whitesmoke, whitesmoke, whitesmoke, whitesmoke,whitesmoke, transparent), url("icons MHE/bgRaster.png");
     display: grid;
     justify-items: center;
     color: grey;
-    margin: 0em 10em 0em 10em;
-    grid-template-areas:
-        "iconCat"
-        "line"
-        "additional"
+    grid-template-areas: "iconCat" "line" "additional"
 }
 .iconCat{
     display:grid;
