@@ -76,96 +76,53 @@
     </div>
 
     <!--mid deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-    <!--categorie iconen-->
     <div id="mid">
-      <div class="container">
-   
-        <img class="img" src="icons MHE/icnBoek.png"/>
-  
-        <div class="omschrijving">
-          <text >Bedrijfnaam</text>
-          <br/>
-          <text >bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving</text>
-        </div>
-        <div>
-          <ul class="info">
-            <li>
-              <span>Adres: <span class="floatrechts">hanspietweg 36</span></span>
-            </li>
-            <li>
-              <span>
-                Telefoonnummer: <span class="floatrechts">+056 83243t9y3947</span>
-              </span>
-            </li>
-            <li>
-              <span>
-                Email: <span class="floatrechts">mail@mail.nl</span>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr/>
+      <xsl:for-each select="leveranciersinfo/leverancier">
       <div class="container">
 
-        <img class="img" src="icons MHE/icnBoek.png"/>
+          <img class="img" src="icons MHE/icnBoek.png"/>
 
-        <div class="omschrijving">
-          <text >Bedrijfnaam</text>
-          <br/>
-          <text >bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving</text>
+          <div class="omschrijving">
+            <xsl:value-of select="leveranciersnaam"/>
+           
+          </div>
+          <div>
+            <ul class="info">
+              <li>
+                <span>
+                  Adres: <span class="floatrechts"><xsl:value-of select="leveranciersadres"/></span>
+                </span>
+              </li>
+              <li>
+                <span>
+                  Plaats: <span class="floatrechts"><xsl:value-of select="leveranciersplaats"/></span>
+                </span>
+              </li>
+              <li>
+                <span>
+                  Postcode: <span class="floatrechts"><xsl:value-of select="leverancierspostcode"/></span>
+                </span>
+              </li>
+              <li>
+                <span>
+                  Email: <span class="floatrechts"><xsl:value-of select="leveranciersemail"/></span>
+                </span>
+              </li>
+              <li>
+                <span>
+                  Telefoonnummer: <span class="floatrechts"><xsl:value-of select="leverancierstelefoon"/></span>
+                </span>
+              </li>
+              
+              
+            </ul>
+          </div>
+       
         </div>
-        <div>
-          <ul class="info">
-            <li>
-              <span>
-                Adres: <span class="floatrechts">hanspietweg 36</span>
-              </span>
-            </li>
-            <li>
-              <span>
-                Telefoonnummer: <span class="floatrechts">+056 83243t9y3947</span>
-              </span>
-            </li>
-            <li>
-              <span>
-                Email: <span class="floatrechts">mail@mail.nl</span>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr/>
-      <div class="container">
-
-        <img class="img" src="icons MHE/icnBoek.png"/>
-
-        <div class="omschrijving">
-          <text >Bedrijfnaam</text>
-          <br/>
-          <text >bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving bedrijfomschrijving</text>
-        </div>
-        <div>
-          <ul class="info">
-            <li>
-              <span>
-                Adres: <span class="floatrechts">hanspietweg 36</span>
-              </span>
-            </li>
-            <li>
-              <span>
-                Telefoonnummer: <span class="floatrechts">+056 83243t9y3947</span>
-              </span>
-            </li>
-            <li>
-              <span>
-                Email: <span class="floatrechts">mail@mail.nl</span>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr/>
+        <hr/>
+      </xsl:for-each>  
+      
+      
     </div>
     
     <!--footer deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
