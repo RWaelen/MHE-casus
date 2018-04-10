@@ -88,39 +88,52 @@
     </div>
 
     <!--mid deel|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-    <!--categorie iconen-->
     <div id="mid">
       <!--foreach item in winkelwagen-->
       <br/>
       <hr/>
       <div class="product">
+        <!--Image url opgehaald van xml-->
         <div class="productimg">
-          <img src="icons MHE/musthave-s9BlauwHC.png"/>
+          <img>
+            <xsl:attribute name="src">
+              <xsl:value-of select="productinfo/artikel/imgurl"/>
+            </xsl:attribute>
+          </img>
         </div>
+
         <div class="productnaam">
           <b><xsl:text>Productnaam</xsl:text></b>
           <br/>
-          <xsl:text>Samsung Galaxy S9</xsl:text>
+          <xsl:value-of select="productinfo/artikel/naam"/>
         </div>
+
         <div class="winkelnaam">
           <b><xsl:text>Winkelnaam</xsl:text></b>
           <br/>
-          <xsl:text>MHE</xsl:text>
+          <xsl:for-each select="leveranciersinfo/leverancier">
+            <xsl:if test="leveranciersnummer=1">
+              <xsl:value-of select="leveranciersnaam"/>
+            </xsl:if>
+          </xsl:for-each>
         </div>
+
         <div class="aantal">
           <b><xsl:text>Aantal</xsl:text></b>
           <br/>
           <input class="aantalSelect" type="number" value="2" min="0"/>
         </div>
+
         <div class="verwijder">
           <img class="trashcan" src="icons MHE/Trashcan.png"/>
         </div>
         <div class="prijs">
-            <b><xsl:text>Prijs</xsl:text></b>
-            <br/>
-            <xsl:text>&#8364;21,99</xsl:text>
+          <b><xsl:text>Prijs</xsl:text></b>
+          <br/>
+          <xsl:value-of select="productinfo/artikel/prijs"/>
         </div>
       </div>
+
       <hr/>
       <br/>
       <div class="optelsom">
@@ -166,6 +179,7 @@
         <li>Amusement</li>
       </ul>
       </div>
+      
       <div>
       <h3>Winkels</h3>
       <ul>
@@ -195,6 +209,5 @@
 
 </body>
 </html>
-</xsl:template>
-        
+</xsl:template>         
 </xsl:stylesheet>
