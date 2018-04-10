@@ -18,7 +18,7 @@
     <div id="navbar">
       <!--logo-->
       <div class="logoDropdowns">
-        <b><a class="logo" href="areagridXML.xml">MHE</a></b> <!--Link staat hierrrr-->
+        <b><a class="logo" href="MHEmainpage.xml">MHE</a></b> <!--Link staat hierrrr-->
         <!--dropdown categorieën-->
 		<div class="dropdown">
 			<button class="dropbtn">Categorieën</button>

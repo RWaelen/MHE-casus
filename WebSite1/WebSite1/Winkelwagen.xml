@@ -2,20 +2,102 @@
 <?xml-stylesheet type="text/xsl" href="Winkelwagen.xsl"?>
 
 <hi>
-  <logo>
-    <text>MHE</text>
-  </logo>
-  <categorieën>
-    <content>Meubels</content>
-    <content>Meubels</content>
-    <content>Meubels</content>
-    <content>Meubels</content>
-    <content>Meubels</content>
-    <content>Meubels</content>
-    <content>Meubels</content>
-  </categorieën>
-  <winkels>
-    MHE
-  </winkels>
+  <productinfo>
+    <artikel>
+      <artikelnummer>1</artikelnummer>
+      <productnummer>1</productnummer>
+      <naam>Google Chromecast</naam>
+      <prijs>€35,99</prijs>
+      <omschrijving>Met de nieuwe Google Chromecast stream je eenvoudig content vanaf een smartphone of tablet naar jouw televisie. Je sluit de Google Chromecast aan op een HDMI-poort van uw televisie, waarna je direct tv-programma's, films, sport en games kunt streamen. Daarnaast kun je alles wat op jouw Android-tablet of -smartphone staat weergeven op jouw televisie. Je hoeft simpelweg enkel op het cast-icoon te drukken om content naar jouw televisie te streamen. Jouw smartphone of tablet is de afstandsbediening waarmee je kunt zoeken, afspelen, pauzeren en meer. Dankzij Fast Play wordt content snel geladen en met What's On word je op de hoogte gebracht van nieuwe en populaire content. Ten opzichte van de vorige Google Chromecast biedt de nieuwe Google Chromecast een betere resolutie, snellere prestaties en een betere verbinding.</omschrijving>
+      <recentie>top product 5/5</recentie>
+      <leveranciersnummer>1</leveranciersnummer>
+      <imgurl>http://picscdn.redblue.de/doi/pixelboxx-mss-69112206/fee_786_587_png/GOOGLE-Chromecast</imgurl>
+      <productcategorie>electronica</productcategorie>
+      <subcategorie>multimedia</subcategorie>
+      <specificaties>
+        Breedte:51.9 mm
+        Hoogte:13.5 mm
+        Diepte:51.9 mm
+        Kleur:Zwart
+        Gewicht:39.1 g
+        Wifi:ja
+      </specificaties>
+    </artikel>
 
+    <artikel>
+      <artikelnummer>2</artikelnummer>
+      <productnummer>1</productnummer>
+      <naam>Google Chromecast</naam>
+      <prijs>€39,99</prijs>
+      <omschrijving>Met de nieuwe Google Chromecast stream je eenvoudig content vanaf een smartphone of tablet naar jouw televisie. Je sluit de Google Chromecast aan op een HDMI-poort van uw televisie, waarna je direct tv-programma's, films, sport en games kunt streamen. Daarnaast kun je alles wat op jouw Android-tablet of -smartphone staat weergeven op jouw televisie. Je hoeft simpelweg enkel op het cast-icoon te drukken om content naar jouw televisie te streamen. Jouw smartphone of tablet is de afstandsbediening waarmee je kunt zoeken, afspelen, pauzeren en meer. Dankzij Fast Play wordt content snel geladen en met What's On word je op de hoogte gebracht van nieuwe en populaire content. Ten opzichte van de vorige Google Chromecast biedt de nieuwe Google Chromecast een betere resolutie, snellere prestaties en een betere verbinding.</omschrijving>
+      <recentie>super product 5/5</recentie>
+      <leveranciersnummer>2</leveranciersnummer>
+      <imgurl>http://picscdn.redblue.de/doi/pixelboxx-mss-69112206/fee_786_587_png/GOOGLE-Chromecast</imgurl>
+      <productcategorie>electronica</productcategorie>
+      <subcategorie>multimedia</subcategorie>
+      <specificaties>
+        Breedte:51.9 mm
+        Hoogte:13.5 mm
+        Diepte:51.9 mm
+        Kleur:Zwart
+        Gewicht:39.1 g
+        Wifi:ja
+      </specificaties>
+    </artikel>
+
+    <artikel>
+      <artikelnummer>3</artikelnummer>
+      <productnummer>2</productnummer>
+      <naam></naam>
+      <prijs></prijs>
+      <omschrijving></omschrijving>
+      <recentie></recentie>
+      <leveranciersnummer>2</leveranciersnummer>
+      <imgurl></imgurl>
+      <productcategorie></productcategorie>
+      <subcategorie></subcategorie>
+      <specificaties></specificaties>
+    </artikel>
+
+    <artikel>
+      <artikelnummer>4</artikelnummer>
+      <productnummer>2</productnummer>
+      <naam></naam>
+      <prijs></prijs>
+      <omschrijving></omschrijving>
+      <recentie></recentie>
+      <leveranciersnummer>3</leveranciersnummer>
+      <imgurl></imgurl>
+      <productcategorie></productcategorie>
+      <subcategorie></subcategorie>
+      <specificaties></specificaties>
+    </artikel>
+  </productinfo>
+
+
+  <leveranciersinfo>
+    <leverancier>
+      <leveranciersnummer>1</leveranciersnummer>
+      <leveranciersnaam>MHE</leveranciersnaam>
+      <leveranciersadres>musthaveweg 325</leveranciersadres>
+      <leverancierspostcode>7832rn</leverancierspostcode>
+      <leveranciersplaats>Heerlen</leveranciersplaats>
+    </leverancier>
+
+    <leverancier>
+      <leveranciersnummer>2</leveranciersnummer>
+      <leveranciersnaam>Ali Express</leveranciersnaam>
+      <leveranciersadres>Chinastraat 3</leveranciersadres>
+      <leverancierspostcode>3245fe</leverancierspostcode>
+      <leveranciersplaats>Beiging</leveranciersplaats>
+    </leverancier>
+
+    <leverancier>
+      <leveranciersnummer>3</leveranciersnummer>
+      <leveranciersnaam>Blokker</leveranciersnaam>
+      <leveranciersadres>blokweg 25</leveranciersadres>
+      <leverancierspostcode>7429fd</leverancierspostcode>
+      <leveranciersplaats>Brunssum</leveranciersplaats>
+    </leverancier>
+  </leveranciersinfo>
 </hi>
