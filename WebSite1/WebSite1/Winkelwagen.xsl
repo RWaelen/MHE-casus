@@ -10,8 +10,28 @@
     <link rel="stylesheet" href="Winkelwagen.css"/>
   </style>
 </head>
-
 <body>
+
+  <?php 
+  $username = "admin";
+  $password = "admin";
+  $hostname = "localhost"; 
+  
+  $dbhandle = mysql_connect($hostname, $username, $password)
+  or die("Unable to connect to SQL");
+  echo "Connected to MySQL<br>";  
+  
+  
+  $selected = mysql_select_db("Database.mdf",$dbhandle)
+  or die("Could not select examples");
+  system.out.println("some")
+  
+  //close the connection
+  mysql_close($dbhandle);
+  
+  ?>
+  
+  
 <!--gridcontents-->
   <div class="grid-container">
     <!--Navbar|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
@@ -94,6 +114,17 @@
       <hr/>
       <div class="product">
         <!--Image url opgehaald van xml-->
+        <xsl:variable name="levNmb">
+          <xsl:value-of select="productinfo/artikel/leveranciersnummer"/>
+        </xsl:variable>
+        <xsl:variable name="prijs">
+          <xsl:value-of select="productinfo/artikel/prijs"/>
+        </xsl:variable>
+        
+        <xsl:variable name="test">
+          5
+        </xsl:variable>
+        
         <div class="productimg">
           <img>
             <xsl:attribute name="src">
@@ -112,7 +143,7 @@
           <b><xsl:text>Winkelnaam</xsl:text></b>
           <br/>
           <xsl:for-each select="leveranciersinfo/leverancier">
-            <xsl:if test="leveranciersnummer=1">
+            <xsl:if test="leveranciersnummer = $levNmb">
               <xsl:value-of select="leveranciersnaam"/>
             </xsl:if>
           </xsl:for-each>
@@ -121,21 +152,24 @@
         <div class="aantal">
           <b><xsl:text>Aantal</xsl:text></b>
           <br/>
-          <input class="aantalSelect" type="number" value="2" min="0"/>
+          <input id="aantal" class="aantalSelect" type="number" value="1" min="1" onchange="myFunction(this)"/>
         </div>
 
         <div class="verwijder">
           <img class="trashcan" src="icons MHE/Trashcan.png"/>
         </div>
+        
         <div class="prijs">
-          <b><xsl:text>Prijs</xsl:text></b>
+          <b><text>Prijs</text></b>
           <br/>
-          <xsl:value-of select="productinfo/artikel/prijs"/>
+          <text>&#8364;</text><text id="aantalXprijs"><xsl:value-of select="productinfo/artikel/prijs"/></text>
         </div>
       </div>
 
       <hr/>
       <br/>
+      
+      <!--Optelsom van alle kosten en de bestellen en verderewinkelen knop-->
       <div class="optelsom">
         <div class="hebjealles">
           Heb je alles wat je nodig hebt? <br/> Bestel dan nu!<br/><br/><br/><br/><br/>
@@ -156,11 +190,15 @@
           <hr2/>
           <div>
             <span>
-              Totaal <span class="prijskosten">&#8364;21,99</span>
+              Totaal <span class="prijskosten">&#8364;<span id="total"></span></span>
             </span>
+
           </div>
-          <button class="btnVolg">Bestellen</button>
-          
+          <form action="localhost">
+            <button class="btnVolg">Bestellen</button>
+          </form>
+
+
         </div>
       </div>
     </div>
@@ -206,7 +244,27 @@
       </div>
     </div>
   </div>
+  
+  <script>
+    var output = document.getElementById("aantalXprijs");
+    var total = document.getElementById("total");
 
+    function myFunction(el) {
+    var p = parseFloat('<xsl:value-of select="productinfo/artikel/prijs"/>');
+    var test = el.value * p;
+    var result =parseFloat(test).toFixed(2);
+    output.innerHTML =result;
+    totaalPrijsBerekening(result);
+    }
+
+    function totaalPrijsBerekening(pr) {
+    var tot = 0;
+    tot=parseFloat(tot+pr).toFixed(2);
+
+    total.innerHTML = tot;
+    }
+
+  </script>
 </body>
 </html>
 </xsl:template>         
