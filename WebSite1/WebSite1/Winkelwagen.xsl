@@ -92,16 +92,16 @@
           <img  src="icons MHE/winkelwagenGroot.png"/>
         </div>
         <div class="wwtext">
-          <xsl:text>Jouw</xsl:text>
+          <text>Jouw</text>
           <br/>
-          <xsl:text>Winkelwagen</xsl:text>
+          <text>Winkelwagen</text>
         </div>
       </div>
       <div class="TenT">
         <div>
-          <xsl:text>Al iets besteld? Volg je</xsl:text>
+          <text>Al iets besteld? Volg je</text>
           <br/>
-          <xsl:text>product met Track&#38;Trace</xsl:text>
+          <text>product met Track&#38;Trace</text>
         </div>
         <button class="btnVolg">Volg nu!</button>
       </div>
@@ -119,10 +119,6 @@
         </xsl:variable>
         <xsl:variable name="prijs">
           <xsl:value-of select="productinfo/artikel/prijs"/>
-        </xsl:variable>
-        
-        <xsl:variable name="test">
-          5
         </xsl:variable>
         
         <div class="productimg">
